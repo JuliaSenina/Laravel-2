@@ -1,0 +1,12 @@
+{
+    "name": "y.senina/laravel-2",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "YSenina\\Laravel2\\": "src/"
+        }
+    }
+}
