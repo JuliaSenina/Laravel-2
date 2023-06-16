@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Blog\App\Http\Controllers\TodoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/todo', [\blog\app\Http\Controllers\TodoController::class, 'index']);
+Route::get('/todo/create', [\blog\app\Http\Controllers\TodoController::class, 'create']);
+Route::get('/todo/{id}', [\blog\app\Http\Controllers\TodoController::class, 'find']);*/
+
+Route::get('/todo', [TodoController::class, 'index']);
+Route::get('/todo/create', [TodoController::class, 'create']);
+Route::get('/todo/{id}', [TodoController::class, 'find']);
